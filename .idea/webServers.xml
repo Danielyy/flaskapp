@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0b1e440b-9653-423b-8590-97d50a22aa83" name="192.168.104.202" url="http://192.168.104.202">
+        <fileTransfer host="192.168.104.202" port="22" rootFolder="/home/yangyi" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,43 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<head>
+{% block head %}
+    {{ super() }}
+    <title>{% block title %}活动兑换码领取{% endblock title %}</title>
+{% endblock head %}
+</head>
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">首页</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/aiqiyi">爱奇艺</a></li>
+                <li><a href="/baidu">百度网盘</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% block page_content %}
+        <h2 style="text-align: center">{{ activity_name }}</h2>
+        <p>可用兑换码数量：{{ numbers }}</p>
+        {{ wtf.quick_form(form) }}
+        <br><br>
+        {% include "_layout.html" %}
+    {% endblock %}
+</div>
+{% endblock %}
+

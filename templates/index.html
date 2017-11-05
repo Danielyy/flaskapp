@@ -1,0 +1,20 @@
+{% extends "bootstrap/base.html" %}
+{% block head %}
+    {{ super() }}
+    <title>{% block title %}活动兑换码领取{% endblock title %}</title>
+{% endblock head %}
+
+
+
+{% block content %}
+<div class="container">
+    {% block page_content %}
+        <h1 style="text-align: center">活动兑换码领取页面</h1>
+        <h4 style="color:red; text-align: center">注意：本系统中的所有活动兑换码均为公司资产，仅提供给符合活动要求的客户，请勿随意领取它用！</h4>
+        <h3 style="text-align: center"><a href='aiqiyi' >爱奇艺兑换码领取</a></h3>
+        <h3 style="text-align: center"><a href='baidu' >百度网盘兑换码领取</a></h3>
+        <br><br>
+        {% include "_layout.html" %}
+    {% endblock %}
+</div>
+{% endblock %}
